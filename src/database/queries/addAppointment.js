@@ -8,10 +8,10 @@ const makeAppointment= (pname,age,phone,uni_name,date) => {
    ON patients.id = appointments.patient_id
    INNER JOIN universities
   ON universities.id= appointments.uni_id;`,
-    values: []
+    values: [pname,age,phone,uni_name,date]
   };
 
   return connection.query(sql)
 };
 
-module.exports = getPatients;
+module.exports = makeAppointment;

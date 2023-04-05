@@ -14,8 +14,6 @@ CREATE TABLE universities (
   name VARCHAR(55) NOT NULL
 );
 
-
-
 CREATE TABLE appointments (
   id SERIAL PRIMARY KEY,
   date TEXT NOT NULL,
