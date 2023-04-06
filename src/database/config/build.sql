@@ -13,8 +13,7 @@ CREATE TABLE patients (
 CREATE TABLE appointments (
   id SERIAL PRIMARY KEY,
   date TEXT NOT NULL,
-  patient_id INTEGER REFERENCES patients(id),
-  uni_id INTEGER REFERENCES universities(id)
+  patient_id INTEGER REFERENCES patients(id)
 );
 
 INSERT INTO patients (name, age, phone) VALUES 
