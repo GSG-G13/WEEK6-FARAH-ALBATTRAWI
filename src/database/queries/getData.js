@@ -1,12 +1,5 @@
 const connection = require('../config/connection');
-// get appointment
-const getData = () => {
-  const sql = {
-    text:'SELECT * FROM patients',
-    values: []
-  };
 
-  return connection.query(sql)
-};
+const getAppointmentDataFromDB = () => connection.query('SELECT id, name, age, date, time, mobile FROM appointments');
 
-module.exports = getData;
+module.exports = getAppointmentDataFromDB;
