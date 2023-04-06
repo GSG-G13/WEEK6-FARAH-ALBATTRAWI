@@ -1,9 +1,12 @@
 const addAppointment = require('./addAppointment');
-
-const { notFoundError, serverError } = require('./error');
+const { pageNotFoundError, serverError } = require('./error');
+const getAppointment = require('./getAppiontment');
+const getUniName = require('./getUniversityToSelect');
 
 module.exports = {
   addAppointment,
-  notFoundError,
+  getAppointment,
+  getUniName,
+  pageNotFoundError,
   serverError,
 };
