@@ -9,10 +9,6 @@ CREATE TABLE patients (
   phone TEXT NOT NULL
 );
 
-CREATE TABLE universities (
-  id SERIAL PRIMARY KEY,
-  name VARCHAR(55) NOT NULL
-);
 
 CREATE TABLE appointments (
   id SERIAL PRIMARY KEY,
@@ -28,13 +24,6 @@ INSERT INTO patients (name, age, phone) VALUES
   ('Emily Davis', 42 , '555-2468'
   );
 
-
-
-INSERT INTO universities (name) VALUES 
-(
-'University of Palestine'
-),
-('Alazhar University');
 
 
 INSERT INTO appointments (date) VALUES 
