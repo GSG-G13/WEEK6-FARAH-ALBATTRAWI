@@ -8,8 +8,6 @@ form.addEventListener('submit', function(event) {
   for (let [key, value] of formData.entries()) {
     data[key] = value;
   }
-  // ERROR ABOUT THE METHOD!!
-  console.log(data);
   fetch('/add-appointments', { 
     method: 'POST',
     headers: {
