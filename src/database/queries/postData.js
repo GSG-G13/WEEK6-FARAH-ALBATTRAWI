@@ -1,17 +1,18 @@
 const connection = require('../config/connection');
 
-const addAppointment= (pname,age,phone,uni_name,date) => {
-  const sql = {
-    text:`SELECT patients.name,patients.age,patients.phone,universities.name,appointments.date
-    FROM patients
-   INNER JOIN appointments
-   ON patients.id = appointments.patient_id
-   INNER JOIN universities
-  ON universities.id= appointments.uni_id;`,
-    values: [pname,age,phone,uni_name,date]
+const makeAppointment = (name, age, phone, date) => {
+  let id;
+  const patientResult = {
+    text: 'INSERT INTO patients (name, age, phone) VALUES ($1, $2, $3) RETURNING *',
+    values: [name, age, phone]
   };
-
-  return connection.query(sql)
+  
+  return connection.query(patientResult);
+    // .then(patientRes => {
+    //   id = patientRes.rows[0].id;
+    //   // appointmentResult.values.push(patient_id);
+    //   return connection.query(appointmentResult);
+    // })
 };
 
-module.exports = addAppointment;
+module.exports = makeAppointment;
