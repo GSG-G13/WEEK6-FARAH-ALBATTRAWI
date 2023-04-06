@@ -2,7 +2,6 @@ const express = require('express');
 const {
   addAppointment,
   getAppointment,
-  getUniName,
 } = require('../controllers');
 
 const router = express.Router();
