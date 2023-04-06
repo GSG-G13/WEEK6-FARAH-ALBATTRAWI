@@ -1,6 +1,6 @@
 const connection = require('../config/connection');
 
-const makeAppointment = (name, age, phone, date) => {
+const makeAppointment = (name, age, phone) => {
   let id;
   const patientResult = {
     text: 'INSERT INTO patients (name, age, phone) VALUES ($1, $2, $3) RETURNING *',

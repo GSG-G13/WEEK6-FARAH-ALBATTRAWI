@@ -3,9 +3,10 @@ const makeAppointment = require('../database/queries/postData');
 
 const addAppointment = (req, res) => {
   const {
-    name, age, mobile, date, university,
+    name, age, phone, date
   } = req.body;
-  makeAppointment(name, age, mobile, date, university)
+  console.log(req.body,11);
+  makeAppointment(name, age, phone, date,)
     .then((patientData)=> {
       let {id} = patientData.rows[0];
       appointmentQuery({date, id}).then(appointmentData => {
