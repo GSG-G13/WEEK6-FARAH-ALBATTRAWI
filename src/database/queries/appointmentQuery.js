@@ -9,4 +9,5 @@ const appointmentQuery = ({ date, id }) => {
   return connection.query(appointmentResult)
 };
 
+
 module.exports = appointmentQuery;
