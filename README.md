@@ -1,5 +1,5 @@
 # White Tooth 🦷👩🏻‍⚕️
-### Live demo [_here_]()
+### Live demo [_here_](https://week6-farahandandalbatrawi.onrender.com/)
 
 ## Table of Contents :link:
 - [User Story 🏥](#User-Story)
@@ -17,6 +17,7 @@
 - Start the server: npm start
 - Open your web browser and navigate to http://localhost:3000
 - Fill the form and wait for the university clinic to contact u
+- schema link (https://drawsql.app/teams/gsg-17/diagrams/white-tooth)
 
 # Technologies-Used
 - .HTML, CSS, and JavaScript . 
